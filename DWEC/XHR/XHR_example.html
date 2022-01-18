@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="”en”">
+  <head>
+    <meta charset="”UTF-8″" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    const url = "http://localhost:3000/posts/";
+
+    const xhr = new XMLHttpRequest();
+    // Callback
+    xhr.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        // Imprimeix el text obtingut
+        console.info(this.responseText);
+      }
+    };
+    xhr.open("GET", "fitxer.txt", true);
+    xhr.send();
+  </script>
+</html>
